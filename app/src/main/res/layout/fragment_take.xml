@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+>
+
+    <data>
+        <variable
+            name="string"
+            type="String"/>
+    </data>
+        <LinearLayout
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_width="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        tools:context="com.huapintang.selfcollecttickets.activity.HomeActivity">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="55px" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20px" />
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20px"
+                android:textColor="@color/white"
+                android:textSize="60px" />
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60px">
+
+                <LinearLayout
+                    android:id="@+id/ll_eqcode_take"
+                    android:layout_width="450px"
+                    android:layout_height="350px"
+                    android:background="@drawable/select_white_btn"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="扫码取票"
+                        android:textColor="@color/white"
+                        android:textSize="58px" />
+
+                    <ImageView
+                        android:layout_width="200px"
+                        android:layout_height="150px"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="20px"
+                        android:src="@mipmap/eq_code" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_code_take"
+                    android:layout_width="450px"
+                    android:layout_height="350px"
+                    android:layout_marginLeft="80px"
+                    android:background="@drawable/select_white_btn"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="票号取票"
+                        android:textColor="@color/white"
+                        android:textSize="58px" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="150px"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="20px"
+                        android:src="@mipmap/ticket" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!--<ImageView-->
+            <!--android:id="@+id/iv_login"-->
+            <!--android:layout_width="100px"-->
+            <!--android:layout_height="50px"-->
+            <!--android:layout_alignParentBottom="true"-->
+            <!--android:layout_centerHorizontal="true"-->
+            <!--android:layout_marginBottom="30px"-->
+            <!--android:src="@mipmap/logo" />-->
+    </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="100px"
+                android:layout_marginTop="20px">
+
+                <Button
+                    android:id="@+id/btn_back"
+                    android:layout_width="200px"
+                    android:layout_height="80px"
+                    android:layout_marginLeft="60px"
+                    android:text="上一步" />
+
+                <!--<Button-->
+                <!--android:id="@+id/btn_next"-->
+                <!--android:layout_width="200px"-->
+                <!--android:layout_height="80px"-->
+                <!--android:layout_alignParentEnd="true"-->
+                <!--android:layout_marginRight="60px"-->
+                <!--android:text="下一步" />-->
+
+                <ImageView
+                    android:id="@+id/iv_goto_ext"
+                    android:layout_width="80px"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:src="@mipmap/logo" />
+            </RelativeLayout>
+
+        </LinearLayout>
+</layout>

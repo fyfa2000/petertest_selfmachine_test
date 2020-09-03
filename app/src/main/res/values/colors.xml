@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorMain">#FF6429</color>
+    <color name="blueMain">#002358</color>
+    <color name="colorKey">#EC661F</color>
+    <color name="colorError">#FF6564</color>
+    <color name="white">#ffffff</color>
+    <!--透明白-->
+    <!--<color name="transparent_white">#22ffffff</color>-->
+    <color name="colorET">#02479D</color>
+    <color name="lightWhite">#21ffffff</color>
+    <color name="light5White">#55ffffff</color>
+    <color name="loadColor">#A49885</color>
+    <color name="line_gary">#DEDEDE</color>
+    <color name="black">#000000</color>
+    <color name="selectblack">#2F2B2C</color>
+    <color name="gary_login_line">#C1C1C1</color>
+
+</resources>

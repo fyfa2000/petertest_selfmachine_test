@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Keyboard xmlns:android="http://schemas.android.com/apk/res/android"
+    android:horizontalGap="20px"
+    android:keyHeight="8%p"
+    android:keyWidth="8%p"
+    android:verticalGap="8px">
+    <Row>
+        <!--<Key android:keyWidth="110dp" android:codes="-1"-->
+        <!--android:keyEdgeFlags="left" android:isModifier="true"-->
+        <!--android:horizontalGap="33dp"-->
+        <!--android:isSticky="true" android:keyIcon="@drawable/shift" />-->
+
+        <Key
+            android:codes="122"
+            android:keyEdgeFlags="left"
+            android:keyHeight="8%p"
+            android:keyLabel="Z"
+            android:keyWidth="8%p" />
+        <Key
+            android:codes="120"
+            android:keyHeight="8%p"
+            android:keyLabel="X"
+            android:keyWidth="8%p" />
+        <Key
+            android:codes="99"
+            android:keyHeight="8%p"
+            android:keyLabel="C"
+            android:keyWidth="8%p" />
+        <Key
+            android:codes="118"
+            android:keyHeight="8%p"
+            android:keyLabel="V"
+            android:keyWidth="8%p" />
+        <Key
+            android:codes="98"
+            android:keyHeight="8%p"
+            android:keyLabel="B"
+            android:keyWidth="8%p" />
+        <Key
+            android:codes="110"
+            android:keyHeight="8%p"
+            android:keyLabel="N"
+            android:keyWidth="8%p" />
+        <Key
+            android:codes="109"
+            android:horizontalGap="33dp"
+            android:keyHeight="8%p"
+            android:keyLabel="M"
+            android:keyWidth="8%p" />
+        <!--<Key-->
+            <!--android:codes="-5"-->
+            <!--android:isRepeatable="true"-->
+            <!--android:keyEdgeFlags="right"-->
+            <!--android:keyIcon="@mipmap/key_sure"-->
+            <!--android:keyWidth="8%p" />-->
+
+    </Row>
+
+</Keyboard>

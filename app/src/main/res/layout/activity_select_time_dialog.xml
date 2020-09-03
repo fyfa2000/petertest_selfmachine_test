@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="district"
+            type="String" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="800px"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        tools:context="com.huapintang.cashregister.dialog.selectTime.view.SelectTimeDialog">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80px"
+            android:background="@color/blueMain"
+            android:gravity="center_vertical"
+            android:paddingLeft="20px">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="请选择时间段"
+                android:textColor="@color/white"
+                android:textSize="35px" />
+
+        </LinearLayout>
+
+        <!--选区-->
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/lv_select_district"
+            android:layout_width="800px"
+            android:layout_height="400px"/>
+
+
+
+    </LinearLayout>
+</layout>

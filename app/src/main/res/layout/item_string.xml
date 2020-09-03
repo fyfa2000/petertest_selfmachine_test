@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="str"
+            type="com.huapintang.cashregister.fragment.sellTicket.model.SelectString" />
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_district"
+            android:layout_width="match_parent"
+            android:layout_height="80px"
+            android:gravity="center_vertical"
+            android:paddingLeft="30px"
+            android:text="@{str.str}"
+            android:textColor="@color/black"
+            android:textSize="30px" />
+
+    </LinearLayout>
+</layout>

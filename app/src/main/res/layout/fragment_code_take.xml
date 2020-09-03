@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="aet"
+            type="String" />
+    </data>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        tools:context="com.huapintang.selfcollecttickets.activity.CodeTakeActivity">
+
+
+        <LinearLayout
+            android:id="@+id/ll_eqcode_take"
+            android:layout_width="450px"
+            android:layout_height="70px"
+            android:layout_marginTop="70px"
+            android:background="@mipmap/take_no_select">
+
+            <ImageView
+                android:layout_width="40px"
+                android:layout_height="40px"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="40px"
+                android:src="@mipmap/samll_eq_code" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="60px"
+                android:text="扫码取票"
+                android:textColor="@color/white"
+                android:textSize="35px" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+
+            android:layout_width="450px"
+            android:layout_height="70px"
+            android:layout_below="@+id/ll_eqcode_take"
+            android:layout_marginTop="34px"
+            android:background="@mipmap/take_select">
+
+            <ImageView
+                android:layout_width="80px"
+                android:layout_height="40px"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="25px"
+                android:src="@mipmap/samll_ticket" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="35px"
+                android:text="票号取票"
+                android:textColor="@color/white"
+                android:textSize="35px" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="70px"
+            android:layout_marginTop="70px">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="订单查询"
+                android:textColor="@color/white"
+                android:textSize="30px"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="> 确认订单> 出票"
+                android:textColor="@color/white"
+                android:textSize="30px" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="200px"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="尊敬的顾客!"
+                android:textColor="@color/white"
+                android:textSize="40px" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20px"
+                android:text="您可手动输入票号进行取票"
+                android:textColor="@color/white"
+                android:textSize="40px" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40px"
+                android:text="输入票号"
+                android:textColor="@color/white"
+                android:textSize="35px" />
+
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/et_ticket_code"
+            android:layout_width="470px"
+            android:layout_height="70px"
+            android:layout_below="@+id/ll_msg"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30px"
+            android:textColor="@color/white"
+            android:background="@color/colorET"
+            android:textSize="40px" />
+
+        <LinearLayout
+            android:layout_width="1600px"
+            android:layout_height="400px"
+            android:gravity="center"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="220px"
+            android:layout_marginRight="220px"
+            android:orientation="vertical">
+
+
+            <android.inputmethodservice.KeyboardView
+                android:id="@+id/my_numkeyboard"
+                android:layout_width="1200px"
+                android:layout_height="wrap_content"
+                android:background="@null"     android:keyPreviewLayout="@null"
+                android:foregroundGravity="center"
+                android:keyBackground="@drawable/select_keyboard"
+                android:keyTextColor="@color/white"
+                android:popupLayout="@null" />
+
+            <android.inputmethodservice.KeyboardView
+                android:id="@+id/my_abc_keyboard_view"     android:keyPreviewLayout="@null"
+                android:layout_width="1200px"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8px"
+                android:background="@null"
+                android:foregroundGravity="center"
+                android:keyBackground="@drawable/select_keyboard"
+                android:keyTextColor="@color/colorKey"
+                android:popupLayout="@null" />
+
+            <LinearLayout
+                android:layout_width="1200px"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+
+                <android.inputmethodservice.KeyboardView
+                    android:id="@+id/my_asd_keyboard_view"
+                    android:layout_width="1080px"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8px"
+                    android:background="@null"     android:keyPreviewLayout="@null"
+                    android:foregroundGravity="center"
+                    android:keyBackground="@drawable/select_keyboard"
+                    android:keyTextColor="@color/colorKey"
+                    android:popupLayout="@null" />
+                <ImageView
+                    android:id="@+id/iv_delete"
+                    android:layout_width="100px"
+                    android:layout_marginTop="4px"
+                    android:layout_height="74px"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="20px"
+                    android:layout_marginRight="19px"
+                    android:background="@drawable/select_white_btn"
+                    android:padding="20px"
+                    android:src="@mipmap/delete" />
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="1200px"
+                android:layout_height="wrap_content"
+                android:paddingTop="8px"
+                android:layout_marginLeft="120px">
+
+                <android.inputmethodservice.KeyboardView
+                    android:id="@+id/my_abc2_keyboard_view"
+                    android:layout_width="880px"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:foregroundGravity="center"     android:keyPreviewLayout="@null"
+                    android:keyBackground="@drawable/select_keyboard"
+                    android:keyTextColor="@color/colorKey"
+                    android:popupLayout="@null" />
+
+                <ImageView
+                    android:id="@+id/iv_sure"
+                    android:layout_width="200px"
+                    android:layout_height="75px"
+                    android:background="@drawable/select_white_btn"
+                    android:padding="20px"
+                    android:layout_gravity="center_vertical"
+                    android:src="@mipmap/key_sure" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <!--<ImageView-->
+            <!--android:layout_width="80px"-->
+            <!--android:layout_height="25px"-->
+            <!--android:layout_alignParentBottom="true"-->
+            <!--android:layout_centerHorizontal="true"-->
+            <!--android:layout_marginBottom="35px"-->
+            <!--android:src="@mipmap/logo" />-->
+    </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="100px"
+                android:layout_marginTop="20px">
+
+                <Button
+                    android:id="@+id/btn_back"
+                    android:layout_width="200px"
+                    android:layout_height="80px"
+                    android:layout_marginLeft="60px"
+                    android:text="上一步" />
+
+                <!--<Button-->
+                <!--android:id="@+id/btn_next"-->
+                <!--android:layout_width="200px"-->
+                <!--android:layout_height="80px"-->
+                <!--android:layout_alignParentEnd="true"-->
+                <!--android:layout_marginRight="60px"-->
+                <!--android:text="下一步" />-->
+
+                <ImageView
+                    android:layout_width="80px"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:src="@mipmap/logo" />
+            </RelativeLayout>
+        </LinearLayout>
+</layout>

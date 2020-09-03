@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="aet"
+            type="String" />
+    </data>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    >
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        tools:context="com.huapintang.selfcollecttickets.activity.EQCodeActivity">
+
+        <com.huapintang.cashregister.widget.ScanEditText
+            android:id="@+id/et_eqcode"
+            android:layout_width="100px"
+            android:background="@null"
+            android:layout_height="100px" />
+
+        <LinearLayout
+            android:id="@+id/ll_eqcode_take"
+            android:layout_width="450px"
+            android:layout_height="70px"
+            android:layout_marginTop="70px"
+            android:background="@mipmap/take_select">
+
+            <ImageView
+                android:layout_width="40px"
+                android:layout_height="40px"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="40px"
+                android:src="@mipmap/samll_eq_code" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="60px"
+                android:text="扫码取票"
+                android:textColor="@color/white"
+                android:textSize="35px" />
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ll_code_take_ticket"
+            android:layout_width="450px"
+            android:layout_height="70px"
+            android:layout_below="@+id/ll_eqcode_take"
+            android:layout_marginTop="34px"
+            android:background="@mipmap/take_no_select">
+
+            <ImageView
+                android:layout_width="80px"
+                android:layout_height="40px"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="25px"
+                android:src="@mipmap/samll_ticket" />
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="35px"
+                android:text="票号取票"
+                android:textColor="@color/white"
+                android:textSize="35px" />
+
+
+        </LinearLayout>
+
+
+
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="60px"
+            android:layout_marginTop="45px">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="订单查询"
+                android:textColor="@color/white"
+                android:textSize="30px"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="> 确认订单> 出票"
+                android:textColor="@color/white"
+                android:textSize="30px" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="180px"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="尊敬的顾客!"
+                android:textColor="@color/white"
+                android:textSize="40px" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15px"
+                android:text="您可将电子票的二维码紧贴左侧扫码区扫描后取票"
+                android:textColor="@color/white"
+                android:textSize="35px" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25px"
+                android:text="1.请把“二维码”放到“二维码扫描窗”"
+                android:textColor="@color/white"
+                android:textSize="35px" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25px"
+                android:text="2.等待扫描“二维码”"
+                android:textColor="@color/white"
+                android:textSize="35px" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_test_msg"
+            android:visibility="invisible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll_msg"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30px"
+            android:background="@drawable/white_bg_btn"
+            android:gravity="center_vertical"
+            android:padding="10px">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/tishi" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20px"
+                android:layout_marginRight="30px"
+                android:text="请稍候！系统正在读取二维码信息..."
+                android:textColor="@color/white"
+                android:textSize="30px" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll_test_msg"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20px"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="200px"
+                android:layout_height="340px"
+                android:layout_marginLeft="150px"
+                android:scaleType="fitXY"
+                android:src="@mipmap/phone" />
+
+            <ImageView
+                android:layout_width="300px"
+                android:layout_height="150px"
+                android:layout_marginLeft="30px"
+                android:src="@mipmap/right" />
+
+            <ImageView
+                android:layout_width="450px"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50px"
+                android:src="@mipmap/eq" />
+
+
+        </LinearLayout>
+
+
+        <!--<ImageView-->
+            <!--android:layout_width="80px"-->
+            <!--android:layout_height="25px"-->
+            <!--android:layout_alignParentBottom="true"-->
+            <!--android:layout_centerHorizontal="true"-->
+            <!--android:layout_marginBottom="35px"-->
+            <!--android:src="@mipmap/logo" />-->
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100px"
+        android:layout_marginTop="20px">
+
+        <Button
+            android:id="@+id/btn_back"
+            android:layout_width="200px"
+            android:layout_height="80px"
+            android:layout_marginLeft="60px"
+            android:text="上一步" />
+
+        <!--<Button-->
+            <!--android:id="@+id/btn_next"-->
+            <!--android:layout_width="200px"-->
+            <!--android:layout_height="80px"-->
+            <!--android:layout_alignParentEnd="true"-->
+            <!--android:layout_marginRight="60px"-->
+            <!--android:text="下一步" />-->
+
+        <ImageView
+            android:layout_width="80px"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:src="@mipmap/logo" />
+    </RelativeLayout>
+</LinearLayout>
+</layout>

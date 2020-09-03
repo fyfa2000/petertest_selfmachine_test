@@ -1,0 +1,193 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="prining"
+            type="String" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.huapintang.cashregister.fragment.print.view.PrintFragment">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="60px"
+                android:layout_marginTop="45px">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="订单查询> 确认订单>"
+                    android:textColor="@color/white"
+                    android:textSize="24px" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" 出票"
+                    android:textColor="@color/white"
+                    android:textSize="24px"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_print_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="50px">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/prining" />
+
+                <View
+                    android:layout_width="220px"
+                    android:layout_height="1px"
+                    android:layout_gravity="center_vertical"
+                    android:background="@color/loadColor" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/finish" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_load_msg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_print_logo"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20px">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="打印中"
+                    android:textColor="@color/white"
+                    android:textSize="35px" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="180px"
+                    android:text="完成"
+                    android:textColor="@color/loadColor"
+                    android:textSize="35px" />
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/tv_load"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_load_msg"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="35px"
+                android:text="票券正在打印中，请稍候"
+                android:textColor="@color/white"
+                android:textSize="35px" />
+
+            <ProgressBar
+                android:id="@+id/tv_load1"
+                style="@style/m_progress_bar_style"
+                android:layout_width="600px"
+                android:layout_height="30px"
+                android:layout_marginTop="20px"
+                android:orientation="vertical"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/tv_load"
+
+                android:max="100"
+                android:maxHeight="2dp"
+                android:minHeight="2dp"
+                android:progress="20"
+                android:secondaryProgress="40"
+
+                />
+
+            <!--<LinearLayout-->
+            <!--android:id="@+id/tv_load1"-->
+            <!--android:layout_width="600px"-->
+            <!--android:layout_below="@+id/tv_load"-->
+            <!--android:layout_centerHorizontal="true"-->
+            <!--android:orientation="vertical"-->
+            <!--android:layout_marginTop="30px"-->
+            <!--android:background="@drawable/shap_white_btn"-->
+            <!--android:layout_height="30px">-->
+
+            <!--<View-->
+            <!--android:id="@+id/v_load"-->
+            <!--android:layout_width="0px"-->
+            <!--android:background="@drawable/shap_white_bg_btn"-->
+            <!--android:layout_height="30px"/>-->
+
+            <!--</LinearLayout>-->
+
+            <!--<ImageView-->
+            <!--android:id="@+id/tv_load1"-->
+            <!--android:layout_width="600px"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_below="@+id/tv_load"-->
+            <!--android:layout_centerHorizontal="true"-->
+            <!--android:layout_marginTop="30px"-->
+            <!--android:src="@mipmap/article_print" />-->
+
+            <TextView
+                android:id="@+id/tv_load_msg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_load1"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30px"
+                android:text="TICKET"
+                android:textColor="@color/colorKey"
+                android:textSize="35px" />
+
+
+            <ImageView
+                android:layout_width="600px"
+                android:layout_marginTop="30px"
+                android:layout_height="300px"
+                android:layout_below="@+id/tv_load_msg"
+                android:layout_centerHorizontal="true"
+                android:src="@mipmap/priningimg" />
+
+            <ImageView
+                android:id="@+id/iv_down"
+                android:layout_width="50px"
+                android:src="@mipmap/down"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/tv_load_msg"
+                android:layout_marginTop="230px"
+                android:layout_height="50px" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="80px"
+                android:layout_height="25px"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="20px"
+                android:src="@mipmap/logo" />
+        </RelativeLayout>
+
+
+    </FrameLayout>
+</layout>

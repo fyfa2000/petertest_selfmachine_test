@@ -1,0 +1,74 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion "27.0.3"
+
+    defaultConfig {
+        applicationId "com.huapintang.cashregister"
+        minSdkVersion 19
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+
+        lintOptions {
+            abortOnError false
+        }
+        ndk {
+            //选择要添加的对应cpu类型的.so库（不需要的删除即可）。
+            abiFilters 'armeabi', 'armeabi-v7a', 'armeabi-v8a', 'x86', 'x86_64', 'mips', 'mips64'
+        }
+        manifestPlaceholders = [
+                JPUSH_PKGNAME: applicationId,
+                JPUSH_APPKEY : "c6a3b58cebb3457e79875c6a", //JPush上注册的包名对应的appkey（*换成你的*）
+//                JPUSH_APPKEY : "8bda0936cf03e47c5297c93e", //JPush上注册的包名对应的appkey（*换成你的*）  //自己测试用
+                JPUSH_CHANNEL: "developer-default", //暂时填写默认值即可.
+        ]
+
+    }
+
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    repositories {
+        flatDir {
+            dirs 'libs'   // aar目录
+        }
+    }
+
+    dataBinding {
+        enabled = true
+    }
+
+}
+
+
+dependencies {
+    implementation files('libs\\printersdkv5.3.jar')
+    compile(name: 'printlibddebug', ext: 'aar')
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+    compile files('src/main/jniLibs/jna.jar')
+    //极光推送
+    compile 'com.tencent.bugly:crashreport:latest.release' //其中latest.release指代最新Bugly SDK版本号，也可以指定明确的版本号，例如2.1.9
+    compile 'com.tencent.bugly:nativecrashreport:latest.release' //其中latest.release指代最新Bugly NDK版本号，也可以指定明确的版本号，例如3.0
+
+    compile 'com.prolificinteractive:material-calendarview:1.4.0'
+    compile 'com.android.support:appcompat-v7:26.1.0'
+    compile 'com.alibaba:fastjson:1.2.46'
+    compile 'com.android.support:design:26.1.0'
+    compile 'com.squareup.okhttp3:okhttp:3.4.1'
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    compile 'com.google.zxing:core:3.3.0'
+    compile 'com.zhy:okhttputils:2.6.2'
+    compile 'com.zhy:autolayout:1.4.5'
+    compile 'com.google.android.gms:play-services-appindexing:8.1.0'
+    compile 'com.android.support:support-v4:26.1.0'
+    compile 'cn.jiguang.sdk:jpush:3.0.9'
+    compile 'cn.jiguang.sdk:jcore:1.1.7'
+}

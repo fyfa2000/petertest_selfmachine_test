@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Keyboard xmlns:android="http://schemas.android.com/apk/res/android"
+    android:horizontalGap="20px"
+    android:keyHeight="8%p"
+    android:keyWidth="8%p"
+    android:verticalGap="8px">
+
+
+    <Row>
+        <Key
+            android:codes="97"
+            android:keyEdgeFlags="left"
+            android:keyLabel="A" />
+        <Key
+            android:codes="115"
+            android:keyLabel="S" />
+        <Key
+            android:codes="100"
+            android:keyLabel="D" />
+        <Key
+            android:codes="102"
+            android:keyLabel="F" />
+        <Key
+            android:codes="103"
+            android:keyLabel="G" />
+        <Key
+            android:codes="104"
+            android:keyLabel="H" />
+        <Key
+            android:codes="106"
+            android:keyLabel="J" />
+        <Key
+            android:codes="107"
+            android:keyLabel="K" />
+        <Key
+            android:codes="108"
+            android:keyLabel="L" />
+    </Row>
+
+</Keyboard>
