@@ -69,7 +69,7 @@ public class MyApplication extends Application {
 //        initVbar();
         Config.initJPush(this);   //初始化极光推送
 
-        fristPrintTitcket();
+//        fristPrintTitcket();
     }
     //开机打印测试页
     private UsbDevice getCorrectDevice() {

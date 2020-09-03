@@ -25,6 +25,7 @@ import com.huapintang.cashregister.fragment.pay.model.OrderPrintTicket;
 import com.huapintang.cashregister.fragment.pay.model.PayResult;
 import com.huapintang.cashregister.fragment.pay.model.TicketResult;
 import com.huapintang.cashregister.fragment.pay.view.PayView;
+import com.huapintang.cashregister.fragment.print.view.PrintFragment;
 import com.huapintang.cashregister.fragment.seat.model.Seat;
 import com.huapintang.cashregister.fragment.sellTicket.model.GetTicketResult;
 import com.huapintang.cashregister.fragment.sellTicket.model.SellTicket;
