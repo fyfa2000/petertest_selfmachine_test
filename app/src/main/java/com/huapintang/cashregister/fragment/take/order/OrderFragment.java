@@ -12,7 +12,6 @@ import com.huapintang.cashregister.R;
 import com.huapintang.cashregister.bean.PrintTicket;
 import com.huapintang.cashregister.databinding.FragmentOrderBinding;
 import com.huapintang.cashregister.fragment.BaseFragment;
-import com.huapintang.cashregister.fragment.print.view.PrintFragment;
 
 import java.util.ArrayList;
 
